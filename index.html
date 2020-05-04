@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+        <script  src="https://kit.fontawesome.com/95917dde75.js" async></script>
+        <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
+<!------main css-->
+<link href="./css/braweb.css" rel="stylesheet" >
+<!----viewport----->
+<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+<!----bootstrap-->
+<link rel="preconnect" href="//stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!----aos library-->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="preconnect" href="//fonts.googleapis.com/css2?family=Anton&display=swap">
+<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Anton&display=swap">
+<title>Breaking-bad</title>
+    </head>
+    <body>
+<!----navbarmenu-->
+<div id="mySidenav" class="sidenav"> 
+  <div class="mt-5">
+    <a href="#" id="abouttar">About</a>
+    <a href="#" id="searchquot">Search Quotes</a>
+    <a href="#" id="characters">Characters</a>
+    <a href="#" id="contact">Contact us</a>
+  </div>
+  </div>
+     <!---navbar-->
+     <div class="pos-f-t " style="position: fixed; z-index: 99; width: 100%;;">
+        <nav class="navbar navbar-dark"  id="navBar"  style="background-color: black; padding: 2%; transition: 0.5s;" >
+        <div class="icons">
+          <i id="icon" style=" color: blanchedalmond;" class="fas fa-bars ml-4 "></i>
+          <i id="close" style=" color: blanchedalmond; display: none;"  class="fas fa-times ml-4"></i>
+        </div>
+        <div class="logo text-center mr-2" >
+          <picture>
+            <source media="(max-width: 700px)" srcset="./img/mobilelogo.png 50w">
+              <img src="./img/logo.png" style="height: 60px ; width: 100px;" alt="breaking bad logo">
+            </picture>
+        </div>
+        </nav>
+      </div>
+<!----welcome to bra carousel-->
+   <div id="welcome">
+    <div class="overlay">
+      <div class="center">
+        <span><h4 style="font-family: 'Anton', sans-serif; color: white;">Everything about Breaking-bad</h4></span>
+      </div>
+      <div class="center2">
+        <i id="down" class="fas fa-chevron-down" style="font-size: 70px; color: white;"></i>
+      </div>
+    </div>
+   
+    
+   </div>
+  
+  <!---about the show-->
+  <section id="about" class="p-2" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pt-5" style="color: white; ">
+                <div class="p-3 pt-5" id="abb">
+                <h4 >ABOUT THE SHOW</h4>
+                <P><i>Breaking Bad</i> follows protagonist Walter White (Bryan Cranston), a chemistry teacher who lives in New Mexico with his wife (Anna Gunn) and teenage son (RJ Mitte) who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live..</P>
+              </div>
+              </div>
+            <div class="col-md-6">
+              <video width="100%"  controls >
+                  <source src="./img/Breaking Bad Trailer [HD].mp4" type="video/mp4" title="bra trailer">
+                </video>
+            </div>
+        </div>
+    </div>
+</section>
+<!----characters quotes-->
+<section id="character"  style="background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(4,18,2,1) 75%, rgba(18,64,4,1) 98%);" >
+  <div class="container" >
+      <div class="row">
+          <div class="col-md-6 p-3"  style="color: white;">
+              <div class="p-3 pt-5">
+             <h1 >About Characters</h1>
+              <p>As the main character, Bryan Cranston makes Walt very real. He is a good man who has suffered a lot in life. His son has Cerebral Palsy, he is a chemist that is too foo for his high school teaching job, has an unexpected baby on the way, and worst of all, he has terminal lung cancer.</p>
+              <button type="button" class="btn btn-outline-info mt-2 ml-5"  id="charbtn">Show all character list<i class="fas fa-chevron-circle-down ml-2 mb-2"></i></button>
+              <button type="button" style="display: none;" class="btn btn-outline-info mt-2 ml-5" id="charbtn2"> Hide all character list<i class="fas fa-chevron-circle-up ml-2 mb-2"></i></button>
+            </div>
+        </div>
+          <div class="target col-md-6 p-3">
+         <img class="p-1" data-src="./img/cast.png" width="100%"  style="border: 3px solid gold;" alt="cast">
+        </div>
+        <div id="conts"></div>
+        </div>
+      
+  </div>
+
+</section>
+<!---grid-->
+<div id="Quotes"  style="overflow-x: hidden; overflow-y: hidden;">
+  <div class="sys1 p-5">
+  <h1 >Search Quotes</h1>
+  <h2 > From All Season</h2>
+  <span class="text-center"><button type="button" class="btn btn-outline-warning p-2 " id="char2">Search Character Quotes<i class="fas fa-chevron-circle-down ml-2 mb-2"></i></button></span>
+</div>
+  <div class="target sys2 p-5">  
+  <img data-src="./img/quote.png" style="width: 100%;" alt="jessie and heinserbeg png"  data-aos="fade-left" data-aos-duration="1500">
+  </div>
+  </div>
+<!---end-->
+<!----search quotes-->
+<div class="container-fluid p-4" style="background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(4,18,2,1) 75%, rgba(18,64,4,1) 98%)">
+      <div class="col-md-6 m-auto" id="searchDiv" style="display: none;">
+
+          <h3 class="text-center p-4" style="color: rgb(247, 241, 241); font-family: 'Anton', sans-serif;">
+              Search Characters Quotes by their names
+          </h3>
+          <div class="form-grup">
+              <input type="text" class="imput form-control form-control-lg"   title="Only Alphabets" id="search" placeholder="search">
+            </div>
+      </div>
+      <div id="match">
+      </div>
+</div>
+
+  <button onclick="scrollToTop()"  id="myBtn" title="Go to top"><i class="  fa fa-chevron-circle-up p-3" style="color: white;" aria-hidden="false"></i></button>
+  
+  <!-- Footer -->
+<footer class="page-footer font-small indigo" style="  background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(4,18,2,1) 75%, rgba(18,64,4,1) 98%)">
+    <div class="container" >
+      <!-- Grid row-->
+      <div class="row text-center d-flex justify-content-center pt-5 mb-3" >
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">About us</a>
+          </h6>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Products</a>
+          </h6>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Awards</a>
+          </h6>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Help</a>
+          </h6>
+        </div>
+        <div class="col-md-2 mb-3">
+          <h6 class="text-uppercase font-weight-bold">
+            <a href="#!">Contact</a>
+          </h6>
+        </div>
+      </div>
+      <!-- horizontal line-->
+      <hr class="rgba-white-light" style="margin: 0 15%;">
+      <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+      </div>
+      <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+      <div class="row pb-3">
+        <!-- Grid column -->
+        <div class="col-md-12">
+          <div class="some  mb-5 flex-center text-center mt-5 ">
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-4 " style="color: white;"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-4" style="color: white;"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <i class="fab fa-google-plus-g fa-lg white-text mr-4"style="color: white;"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in fa-lg white-text mr-4"style="color: white;"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-4"style="color: white;"> </i>
+              
+            </a>
+            <!--Pinterest-->
+            <a class="pin-ic">
+              <i class="fab fa-pinterest fa-lg white-text"style="color: white;"> </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3" id="cont">© 2020 Developed by:
+      <a href=""> kuji bolkvadze</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+        <!----bootstrap js-->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" async></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" async></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
+        <!----main js-->
+        <script  src="./js/Braweb.js" defer></script>
+          <script>
+          AOS.init();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+ 
+ .anime .sm{
+   color: white;
+ }
+ .anime h6{
+   font-weight: bolder;
+   color: rgb(201, 152, 5);
+ }
+ .anime p{
+    color: goldenrod;
+  }
+
+ .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+
+  }
+
+  .center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+
+  }
+  
+  
+  .center>span{
+      border-bottom: 2px solid green;
+      font-weight: bolder;
+      margin-top: 10px;
+   
+  }
+/*----sidenav---*/
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    bottom: 0; 
+    right: 0;
+    background-color: black;
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(201, 201, 201);
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+  }
+  /*  mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  #welcome{
+    background-image: url(../img/bra.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+  }
+  #main {
+    transition: margin-right .5s;
+    padding: 20px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  /*welcome to bra*/
+  #about{
+  background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(4,18,2,1) 75%, rgba(18,64,4,1) 98%);
+}
+/*scroll top button*/
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    cursor: pointer; 
+    padding: 5px; 
+    font-size: 18px; 
+    transition: 0.9s;
+    border-radius: 60%;
+    background-color: rgb(0, 0, 0);
+  }
+  /*---grid system */
+.sys1{
+  background-color: tomato;
+  grid-area: sys1;
+}
+.sys2{
+  background-color: rgb(80, 16, 5);
+  grid-area: sys2;
+}
+#Quotes{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(1, 100%);
+  grid-template-areas: "sys1 sys2";
+}
+.sys1 h1 { color: #fff; font-family: 'Righteous', cursive; font-size: 65px; font-weight: normal; line-height: 60px; margin: 10px 0 20px; text-transform: uppercase; text-shadow: 2px 2px 0 #000; margin: 10px 0 24px; text-align: center; }
+.sys1  h2 { font-size: 30px; letter-spacing: -1px; color: #DFBF84; text-transform: uppercase; text-shadow: 1px 1px 0 #000;
+  
+         margin: 10px 0 24px; text-align: center; line-height: 50px; }
+.sys1, .sys2{
+ 
+  background: linear-gradient(90deg, rgba(0,0,0,1) 26%, rgba(4,18,2,1) 75%, rgba(18,64,4,1) 98%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #444;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+}
+ 
+  /*--style table----*/
+  /* 
+Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+table{
+  table-layout:fixed;
+}
+td th {
+word-break: break-word;
+}
+
+.overlay{
+  width: 100%;
+  height: 700px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(27, 27, 27, 0.5);
+  z-index: 5;
+}
+@media only screen and (max-width: 700px){
+  #welcome{
+    background-image: url(../img/bramobile.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 340px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+
+  }
+}
+/*responsive
+ content for mobile devices
+  */
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  /*responsive image for mobile devic */
+  #Quotes{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  grid-template-rows: auto;
+    grid-template-areas: "sys2"
+                        "sys1";
+  }
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	/* Hide table headers */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr { border: 1px solid #ccc; }
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	td:before { 
+		/* table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Series:"; font-weight: bolder; border-bottom: 1px solid black;}
+	td:nth-of-type(2):before { content: "Name:"; font-weight: bolder; }
+	td:nth-of-type(3):before { content: "Nickname:";font-weight: bolder; }
+  td:nth-of-type(4):before { content: "Job title:";font-weight: bolder; }
+  td:nth-of-type(5):before { content: "Actor:";font-weight: bolder; }
+	td:nth-of-type(6):before { content: "Image:";font-weight: bolder; }
+};
+ .alert{
+   color: red;
+ }
+.alert p {
+           margin-top: 20px;
+            font-family: cursive         
+}
+
+  
+  
